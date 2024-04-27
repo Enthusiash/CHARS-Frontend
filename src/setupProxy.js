@@ -3,7 +3,8 @@ module.exports = function (app) {
 	app.use(
 		["/main", "/validuser", "/validadmin", "/validsupplier", "/uploads"],
 		createProxyMiddleware({
-			target: "http://localhost:5000" || "https://chars-store.herokuapp.com:5000" || "https://chars-backend.onrender.com:5000",
+			target: "https://chars-backend.onrender.com:5000",
+			// target: "http://localhost:5000" || "https://chars-store.herokuapp.com:5000" || "https://chars-backend.onrender.com:5000",
 		})
 	);
 };
